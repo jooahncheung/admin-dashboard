@@ -7,7 +7,7 @@
 #dashboard-container {
   display: grid;
   /* Col 1 is Sidebar, Col 2 is Header/Content */
-  grid-template-columns: 225px 1fr; [cite: 2026-02-10]
+  grid-template-columns: 225px 1fr;
   grid-template-rows: auto 1fr;
   min-height: 100vh;
 }
@@ -15,6 +15,7 @@
 .logo {
   font-size: 2em;
   margin: 20px;
+  margin-bottom: 0;
 }
 
 #sidebar {
@@ -29,10 +30,10 @@
 
 .link {
   margin-bottom: 15px; /* Space between the rows */
-  padding: 2px;  /* Space inside the link box */
-  display: flex; 
+  padding: 2px; /* Space inside the link box */
+  display: flex;
   align-items: center;
-  gap: 12px;           /* Space between the Icon and the Text */
+  gap: 12px; /* Space between the Icon and the Text */
 }
 
 .active {
@@ -59,16 +60,71 @@
   justify-content: space-between;
 }
 #header {
-  grid-column: 2; /* This moves the header to the right of the sidebar */ [cite: 2026-02-10]
+  grid-column: 2; /* This moves the header to the right of the sidebar */
   grid-row: 1;
-  background-color: hotpink;
+  background-color: black;
   padding: 20px 40px;
   color: white;
 }
+
 .header-top {
-    background-color: lightpink;
-    display: flex;
+  display: flex;
+  align-items: center;
 }
+
+#search-bar {
+  width: 400px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  max-height: fit-content;
+}
+
+.user {
+  width: 100%;
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+  font-weight: 800;
+}
+
 .header-hero {
-    background-color: purple;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.greeting {
+  margin: 20px;
+}
+
+.btn {
+  font-weight: 700;
+  width: 80px;
+  height: 35px;
+  margin: 10px;
+  border-radius: 20px;
+}
+
+#projects {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.project-card {
+  background-color: hotpink;
+  margin: 20px;
 }
