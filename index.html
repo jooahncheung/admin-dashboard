@@ -89,6 +89,9 @@
       </nav>
       <header id="header">
         <section class="header-top">
+          <span class="material-symbols-outlined menu-toggle" id="menu-open">menu</span>
+
+<div id="sidebar-overlay"></div>
           <div class="search">
             <span class="material-symbols-outlined">search</span>
             <input type="search" id="search-bar" />
@@ -165,43 +168,7 @@
               </div>
             </article>
 
-            <article class="project-card">
-              <h3>Super cool project</h3>
-              <p>
-                This is just filler content, don't you see this super cool
-                project? Super cool right?
-              </p>
-              <div class="interact">
-                <span class="material-symbols-outlined">bookmark_heart</span>
-                <span class="material-symbols-outlined">comment</span>
-                <span class="material-symbols-outlined">share</span>
-              </div>
-            </article>
-            <article class="project-card">
-              <h3>Super cool project</h3>
-              <p>
-                This is just filler content, don't you see this super cool
-                project? Super cool right?
-              </p>
-              <div class="interact">
-                <span class="material-symbols-outlined">bookmark_heart</span>
-                <span class="material-symbols-outlined">comment</span>
-                <span class="material-symbols-outlined">share</span>
-              </div>
-            </article>
-
-            <article class="project-card">
-              <h3>Super cool project</h3>
-              <p>
-                This is just filler content, don't you see this super cool
-                project? Super cool right?
-              </p>
-              <div class="interact">
-                <span class="material-symbols-outlined">bookmark_heart</span>
-                <span class="material-symbols-outlined">comment</span>
-                <span class="material-symbols-outlined">share</span>
-              </div>
-            </article>
+          
           </div>
         </section>
         <aside id="widgets">
@@ -274,5 +241,19 @@
         </aside>
       </main>
     </div>
+    <script>const menuBtn = document.getElementById('menu-open');
+const sidebar = document.getElementById('sidebar');
+const overlay = document.getElementById('sidebar-overlay');
+
+menuBtn.addEventListener('click', () => {
+  sidebar.classList.toggle('active');
+  overlay.classList.toggle('active');
+});
+
+// Close menu if user clicks the dark background
+overlay.addEventListener('click', () => {
+  sidebar.classList.remove('active');
+  overlay.classList.remove('active');
+});</script>
   </body>
 </html>
