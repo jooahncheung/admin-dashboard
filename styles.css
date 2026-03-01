@@ -126,5 +126,6 @@
 
 .project-card {
   background-color: hotpink;
+  width: 300px;
   margin: 20px;
 }
