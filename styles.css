@@ -290,8 +290,8 @@ hr {
 
 /* Hide the hamburger by default on desktop */
 .menu-toggle {
+  display: none !important; /* Force hide on desktop */
   margin-right: 10px;
-  display: none;
   cursor: pointer;
   font-size: 2rem;
   color: var(--text-main);
@@ -321,7 +321,7 @@ hr {
 
   /* 4. Show Hamburger Menu icon */
   .menu-toggle {
-    display: block;
+    display: block !important;
   }
 
   /* 5. Header Adjustments */
